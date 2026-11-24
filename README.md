@@ -1,5 +1,7 @@
 # opencode-notifier
 
+> Personal fork of [mohak34/opencode-notifier](https://github.com/mohak34/opencode-notifier), published as `@ngc13009/opencode-notifier` so it installs alongside the upstream package. Behavior differences are recorded in [CHANGELOG.md](CHANGELOG.md).
+
 OpenCode plugin that plays sounds and sends system notifications when permission is needed, generation completes, errors occur, or the question tool is invoked. Works on macOS, Linux, and Windows.
 
 ## Quick Start
@@ -8,7 +10,7 @@ For OpenCode 1, add the package to `opencode.json`:
 
 ```json
 {
-  "plugin": ["@mohak34/opencode-notifier@latest"]
+  "plugin": ["@ngc13009/opencode-notifier@latest"]
 }
 ```
 
@@ -16,7 +18,7 @@ For OpenCode 2, use `plugins`:
 
 ```json
 {
-  "plugins": ["@mohak34/opencode-notifier@latest"]
+  "plugins": ["@ngc13009/opencode-notifier@latest"]
 }
 ```
 
@@ -605,8 +607,8 @@ Actionable Linux notifications use the same persistent D-Bus connection for send
 Check and update the configured package:
 
 ```sh
-opencode plugin check @mohak34/opencode-notifier@latest
-opencode plugin update @mohak34/opencode-notifier@latest
+opencode plugin check @ngc13009/opencode-notifier@latest
+opencode plugin update @ngc13009/opencode-notifier@latest
 ```
 
 Use the exact configured target, such as `@beta`, when appropriate, then restart OpenCode. Exact versions stay pinned; change the version in your configuration to upgrade them. See [OpenCode 2 plugin management](https://opencode.ai/v2/docs/plugins).
@@ -620,16 +622,16 @@ If you switch between `latest`, `beta`, or a pinned version and OpenCode still u
 Linux/macOS:
 
 ```bash
-rm -rf ~/.cache/opencode/packages/@mohak34/opencode-notifier*
-rm -rf ~/.cache/opencode/node_modules/@mohak34/opencode-notifier
+rm -rf ~/.cache/opencode/packages/@ngc13009/opencode-notifier*
+rm -rf ~/.cache/opencode/node_modules/@ngc13009/opencode-notifier
 rm -f ~/.cache/opencode/bun.lock
 ```
 
 Windows PowerShell:
 
 ```powershell
-Remove-Item -Recurse -Force "$env:USERPROFILE\.cache\opencode\packages\@mohak34\opencode-notifier*" -ErrorAction SilentlyContinue
-Remove-Item -Recurse -Force "$env:USERPROFILE\.cache\opencode\node_modules\@mohak34\opencode-notifier" -ErrorAction SilentlyContinue
+Remove-Item -Recurse -Force "$env:USERPROFILE\.cache\opencode\packages\@ngc13009\opencode-notifier*" -ErrorAction SilentlyContinue
+Remove-Item -Recurse -Force "$env:USERPROFILE\.cache\opencode\node_modules\@ngc13009\opencode-notifier" -ErrorAction SilentlyContinue
 Remove-Item -Force "$env:USERPROFILE\.cache\opencode\bun.lock" -ErrorAction SilentlyContinue
 ```
 
@@ -641,7 +643,7 @@ To avoid cache confusion while testing, pin the exact version in `opencode.json`
 
 ```json
 {
-  "plugin": ["@mohak34/opencode-notifier@x.y.z"]
+  "plugin": ["@ngc13009/opencode-notifier@x.y.z"]
 }
 ```
 
@@ -649,21 +651,21 @@ On V2:
 
 ```json
 {
-  "plugins": ["@mohak34/opencode-notifier@x.y.z"]
+  "plugins": ["@ngc13009/opencode-notifier@x.y.z"]
 }
 ```
 
 Check the version published under a tag:
 
 ```bash
-npm view @mohak34/opencode-notifier@latest version
-npm view @mohak34/opencode-notifier@beta version
+npm view @ngc13009/opencode-notifier@latest version
+npm view @ngc13009/opencode-notifier@beta version
 ```
 
 On current V1, check the cached version:
 
 ```bash
-cat ~/.cache/opencode/packages/@mohak34/opencode-notifier@latest/node_modules/@mohak34/opencode-notifier/package.json | grep version
+cat ~/.cache/opencode/packages/@ngc13009/opencode-notifier@latest/node_modules/@ngc13009/opencode-notifier/package.json | grep version
 ```
 
 If you use `@beta` or a pinned version, replace `latest` in the path with `beta` or the exact version. Adjust the cache root if you set `XDG_CACHE_HOME`. On V2, use `opencode plugin check` as shown above.

@@ -1,6 +1,6 @@
 # opencode-notifier
 
-An OpenCode plugin that plays sounds, shows desktop notifications, rings the terminal bell and runs user commands when a session needs attention: permission asked, work done, error, question. One npm package, `@mohak34/opencode-notifier`, serves both OpenCode 1 and OpenCode 2 on macOS, Linux and Windows.
+An OpenCode plugin that plays sounds, shows desktop notifications, rings the terminal bell and runs user commands when a session needs attention: permission asked, work done, error, question. One npm package, `@ngc13009/opencode-notifier`, serves both OpenCode 1 and OpenCode 2 on macOS, Linux and Windows. This repository is a personal fork of [mohak34/opencode-notifier](https://github.com/mohak34/opencode-notifier); it is published under the fork's own scope and released manually rather than through the upstream CI tag flow.
 
 What it must do is in [SPEC.md](SPEC.md). Read it before changing behavior.
 

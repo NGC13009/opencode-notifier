@@ -2,7 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased]
+## [1.2.0] - 2026-11-24
+
+First release under this fork's own npm scope, `@ngc13009/opencode-notifier`, so it can be installed alongside the upstream `@mohak34/opencode-notifier` package. Install or upgrade by pointing your OpenCode configuration at the new package name.
 
 ### Added
 
@@ -12,6 +14,7 @@ All notable changes to this project will be documented in this file.
 
 - Existing configurations are unchanged: an unset `windows.scenario` behaves as before. Reminder toasts do not run `focusOnClick` or `onClickCommand`.
 - Reminder toasts write a per-user `HKCU` key that the plugin never removes; delete `HKCU\Software\Classes\AppUserModelId\<appID>` if you stop using the option.
+- Package name only. Config keys, defaults and behavior are identical to `1.1.3` except for the added option above.
 
 ## [1.1.3] - 2026-11-14
 
