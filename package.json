@@ -1,6 +1,6 @@
 {
   "name": "@ngc13009/opencode-notifier",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "OpenCode plugin that sends system notifications and plays sounds when permission is needed, generation completes, or errors occur",
   "author": "mohak34",
   "contributors": [
@@ -24,6 +24,10 @@
     "logos",
     "gnome-shell-extension"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
   "scripts": {
     "build": "bun build src/index.ts src/tui.ts --outdir dist --target node --external node-notifier --external @particle/dbus-next && tsc --emitDeclarationOnly",
     "prepublishOnly": "bun run build",

@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.1] - 2026-11-25
+
+Follows the upstream `1.2.0-beta.0` reminder implementation from #154. The option and defaults are unchanged from `1.2.0`.
+
+### Changed
+
+- Reminder toasts register a missing `windows.appID` through the registry API and leave an existing registration untouched, so terminals that start together no longer overwrite each other or another app's entry (#154).
+- Reminder icons are limited to drive-letter (`C:\...`) and WSL `/mnt/<drive>/...` paths; other paths show the reminder without an icon.
+- A broken PowerShell delays the fallback toast by at most five seconds, giving a slow PowerShell start more room.
+
+### Upgrade notes
+
+- Nothing changes unless you set `windows.scenario` to `"reminder"`. Reminder toasts still do not run `focusOnClick` or `onClickCommand`, and WSL reminders are still untested.
+
 ## [1.2.0] - 2026-11-24
 
 First release under this fork's own npm scope, `@ngc13009/opencode-notifier`, so it can be installed alongside the upstream `@mohak34/opencode-notifier` package. Install or upgrade by pointing your OpenCode configuration at the new package name.
